@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import {useEffect, useState} from 'react'
-
+import './Cadastro.css' 
 
 export default function Cadastro(){
    //Objetos
@@ -41,10 +41,10 @@ export default function Cadastro(){
     }
 
     return(
-        <div class="container">
+        <div className="container">
             <h1>Cadastrar Tutoriais</h1>
 
-            <form class="" onSubmit={salvar}>
+            <form onSubmit={salvar}>
                 <h2 class="subTitulo">Titulo</h2>
                 <input
                     value={titulo}
