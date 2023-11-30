@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 
 export default function Cadastro(){
    //Objetos
+   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
    const [titulo, setTitulo] = useState("")
    const [descricao, setDescricao] = useState("")
    const [tipo, setTipo] = useState("")
@@ -11,8 +12,8 @@ export default function Cadastro(){
    const [data, setData] = useState("")
    const [link, setLink] = useState("")
    const [lista, setLista] = useState("")
-   const [id, setId] = useState(  (listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1)  )
-   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
+   const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1)
+   
    
    useEffect(() => { localStorage.setItem("Lista", JSON.stringify(lista)) }, [lista])
 
@@ -38,8 +39,56 @@ export default function Cadastro(){
     setId(id + 1)
 
     }
+
     return(
-       <h1></h1> 
-    
+        <div class="container">
+            <h1>Cadastrar Tutoriais</h1>
+
+            <form class="" onSubmit={salvar}>
+                <h2 class="subTitulo">Titulo</h2>
+                <input
+                    value={titulo}
+                    onChange={(e) => setTitulo(e.target.value) } />  
+            
+
+                <h2 class="subTitulo">Descrição</h2>
+                <input
+                    value={descricao}
+                    onChange={(e) =>  setDescricao(e.target.value) } />  
+
+
+                <h2 class="subTitulo">Tipo de Tutorial</h2>
+                <input
+                    value={tipo}
+                    onChange={(e) =>  setTipo(e.target.value) } />  
+
+
+                <h2 class="subTitulo">Canal</h2>
+                <input
+                    value={canal}
+                    onChange={(e) =>  setCanal(e.target.value) } />  
+
+
+                <h2 class="subTitulo">Data</h2>
+                <input
+                    value={data}
+                    onChange={(e) =>  setData(e.target.value) } />  
+
+
+                <h2 class="subTitulo">Link</h2>
+                <input
+                    value={link}
+                    onChange={(e) =>  setLink(e.target.value) } />  
+
+
+                <h2 class="subTitulo">ID</h2>
+                <input
+                    value={id}
+                    onChange={(e) =>  setId(e.target.value) } />  
+            
+            <button>Cadastrar</button>
+            </form>
+
+        </div>
     );
 }
