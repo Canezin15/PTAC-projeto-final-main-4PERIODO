@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import {useEffect, useState} from 'react'
 import './Cadastro.css' 
+import Menu from '../Componentes/Menu';
 
 export default function Cadastro(){
    //Objetos
@@ -41,6 +42,10 @@ export default function Cadastro(){
     }
 
     return(
+
+    <div>
+            <Menu/>
+
         <div className="container">
             <h1>Cadastrar Tutoriais</h1>
 
@@ -90,5 +95,7 @@ export default function Cadastro(){
             </form>
 
         </div>
+
+    </div>
     );
 }
