@@ -1,6 +1,6 @@
 import './Menu.css'
 import React  from 'react'
-
+import {Link} from 'react-router-dom'
 
 export default function Menu(){
     return(
@@ -10,9 +10,9 @@ export default function Menu(){
          <nav>
            <h1 class="logo">Central de Tutoriais DIY (Faça Você Mesmo):</h1>
            <ul class="nav-list">
-             <li class="logo-link">Home</li>
-             <li class="logo-link">Cadastrar</li>
-             <li class="logo-link">Destaque</li>
+            <Link to="/"><li class="logo-link"><a class="logo-link">Home</a></li></Link>
+            <Link to="/cadastro"><li class="logo-link"><a class="logo-link">Cadastrar</a></li></Link>
+            <Link to="/destaque"><li class="logo-link"><a class="logo-link">Destaque</a></li></Link>
            </ul>
 
            <div class="menu">
