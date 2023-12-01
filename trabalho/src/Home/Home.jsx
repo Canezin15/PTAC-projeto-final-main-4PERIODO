@@ -1,11 +1,12 @@
+import Menu from '../Componentes/Menu';
+
 export default function Home(){
     return(
         
         <div>
             <Menu/>
         
-        
-        <Header/>
+    
         <h1>PTAC 2 - PROJETO FINAL</h1>
 
         {lista.map((tutorial) =>

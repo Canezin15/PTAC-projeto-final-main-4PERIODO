@@ -1,7 +1,10 @@
+import Menu from '../Componentes/Menu';
+
 export default function Header(){
     return(
-
-        <h1></h1>
+        <div>
+            <Menu/>
+        </div>
     
    )
 
