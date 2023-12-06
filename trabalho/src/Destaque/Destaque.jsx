@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
-import Header from "../Componentes/Header";
 import Menu from "../Componentes/Menu";
 
 export default function Destaque() {
-  const lista = JSON.parse(localStorage.getItem("Lista")).slice(-4);
+    const lista = JSON.parse(localStorage.getItem("Lista")) || [];
 
-  return (
-    <div>
-      <Menu />
-    </div>
-  );
-}
+    return (
+      <div>
+        <Menu />
+  
+        {lista.slice(-4).map((video) => 
+         
+            <Card video={video} />
+        
+        )}
+      </div>
+    );
+  }

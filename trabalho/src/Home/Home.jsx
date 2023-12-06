@@ -1,7 +1,9 @@
 import Menu from "../Componentes/Menu";
+import Card from "../Componentes/Card";
+
 
 export default function Home() {
-  const lista = JSON.parse(localStorage.getItem("Lista"));
+  const lista = JSON.parse(localStorage.getItem("Lista")) || [];
 
   if (lista === null) {
     return (

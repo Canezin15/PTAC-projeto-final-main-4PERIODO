@@ -12,7 +12,7 @@ export default function Cadastro() {
   const [canal, setCanal] = useState("");
   const [data, setData] = useState("");
   const [link, setLink] = useState("");
-  const [lista, setLista] = useState("");
+  const [lista, setLista] = useState(listaLocalStorage);
   const [id, setId] = useState(
     listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1
   );
