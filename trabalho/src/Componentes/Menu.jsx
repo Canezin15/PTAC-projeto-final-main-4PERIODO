@@ -8,7 +8,7 @@ export default function Menu(){
         <header>
         
          <nav>
-           <h1 class="logo">Central de Tutoriais DIY (Faça Você Mesmo):</h1>
+           <h1 class="logo">Faça Você Mesmo</h1>
            <ul class="nav-list">
             <Link to="/"><li class="logo-link"><a class="logo-link">Home</a></li></Link>
             <Link to="/cadastro"><li class="logo-link"><a class="logo-link">Cadastrar</a></li></Link>
