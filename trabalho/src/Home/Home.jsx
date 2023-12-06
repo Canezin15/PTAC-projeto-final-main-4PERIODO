@@ -1,27 +1,23 @@
-import Menu from '../Componentes/Menu';
+import Menu from "../Componentes/Menu";
 
-export default function Home(){
-    return(
-        
-        <div>
-            <Menu/>
-        
-    
-        <h1>PTAC 2 - PROJETO FINAL</h1>
+export default function Home() {
+  const lista = JSON.parse(localStorage.getItem("Lista"));
 
-        {lista.map((tutorial) =>
-            <div className="tutoriais">
-                <p>{tutorial.titulo}</p>
-                <p>{tutorial.descricao}</p>
-                <p>{tutorial.tipo}</p>
-                <p>{tutorial.canal}</p>
-                <p>{tutorial.data}</p>
-                <p>{tutorial.link}</p>
-                <p>{tutorial.id}</p>
-            </div>
+  if (lista === null) {
+    return (
+      <div>
+        <Menu />
+      </div>
+    );
+  }
 
-        )}
-        
+  return (
+    <div>
+      <Menu />
+
+      {lista.map((video) => (
+        <Card video={video} />
+      ))}
     </div>
- );
+  );
 }
