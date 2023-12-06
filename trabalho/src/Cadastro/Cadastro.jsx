@@ -49,7 +49,7 @@ export default function Cadastro() {
     <div>
       <Menu />
 
-      <div className="container">
+      <div className="container-1">
         <h1>Cadastrar Tutoriais</h1>
 
         <form onSubmit={salvar}>

@@ -2,9 +2,8 @@ import "./Card.css";
 
 export default function Card({ video }) {
   return (
-    <div> 
 
-      <div class="container">
+      <div class="">
 
         <div class="card">
 
@@ -12,7 +11,7 @@ export default function Card({ video }) {
 
             <iframe
               width="853"
-              height="480"
+              height="580"
               src={`https://www.youtube.com/embed/${video.link.slice(17)}`}
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -32,6 +31,8 @@ export default function Card({ video }) {
           </div>
         </div>
       </div>
-    </div>
+    
+    
+   
   );
 }
