@@ -15,6 +15,7 @@ export default function Home() {
   return (
     <div>
       <Menu />
+      
       <div className="container">
         {lista.map((video) => (
           <Card video={video} />

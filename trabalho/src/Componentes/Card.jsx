@@ -10,8 +10,8 @@ export default function Card({ video }) {
           <div class="card-header">
 
             <iframe
-              width="853"
-              height="580"
+              width="350"
+              height="300"
               src={`https://www.youtube.com/embed/${video.link.slice(17)}`}
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -27,7 +27,7 @@ export default function Card({ video }) {
           </div>
 
           <div class="card-footer">
-            <a href="/produtos">Ver mais</a>
+            <a href="/">Ver mais</a>
           </div>
         </div>
       </div>
