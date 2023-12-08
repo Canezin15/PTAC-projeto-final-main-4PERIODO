@@ -3,7 +3,7 @@ import "./Card.css";
 export default function Card({ video }) {
   return (
 
-      <div class="">
+      <div>
 
         <div class="card">
 
@@ -16,14 +16,13 @@ export default function Card({ video }) {
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
-
             </iframe>
          
           </div>
 
           <div class="card-body">
-            <h3 class="card-local">{video.titulo}</h3>
-            <h2 class="card-titulo">{video.descricao}</h2>
+           
+            <h2 class="card-titulo">{video.titulo}</h2>
           </div>
 
           <div class="card-footer">
