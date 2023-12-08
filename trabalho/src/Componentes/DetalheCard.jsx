@@ -1,35 +1,29 @@
 import { Link } from "react-router-dom";
-
+import "./DetalheCard.css";
 export default function DetalheCard({ video }) {
   return (
     <div>
-      <div class="container-2">
-        
 
+      <div class="content">
         <div class="left-side">
           <h2>{video.titulo}</h2>
-          <h2>{video.canal}</h2>
-          <h2>{video.tipo}</h2>
+          <h2>Canal: {video.canal}</h2>
+          <h2>Gênero {video.tipo}</h2>
           <p>{video.data}</p>
-          <p>{video.descricao}</p>
-         
-         
-          
+          <p>Descricao{video.descricao}</p>
         </div>
 
-
-
-        <div class="card-header">
-          <iframe
-            width="350"
-            height="300"
+        <div class="iframe">
+          <iframe className="iframe2"
+            width="450"
+            height="500"
             src={`https://www.youtube.com/embed/${video.link.slice(17)}`}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
+            allowfullscreen>
+            </iframe>
         </div>
-
+        
       </div>
     </div>
   );
