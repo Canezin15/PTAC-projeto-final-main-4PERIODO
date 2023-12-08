@@ -1,4 +1,5 @@
 import "./Card.css";
+import { Link } from "react-router-dom";
 
 export default function Card({ video }) {
   return (
@@ -21,17 +22,18 @@ export default function Card({ video }) {
           </div>
 
           <div class="card-body">
-           
-            <h2 class="card-titulo">{video.titulo}</h2>
-          </div>
 
+            <h2 class="card-titulo">{video.titulo}</h2>
+
+          </div>
+ 
           <div class="card-footer">
-            <a href="/">Ver mais</a>
+          <p><Link to="/Detalhe">Ver Mais</Link></p>
           </div>
         </div>
       </div>
     
     
-   
+    
   );
 }

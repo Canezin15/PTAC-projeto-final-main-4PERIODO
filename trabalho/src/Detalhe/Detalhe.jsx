@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom";
-import CardDet from '../Componentes/CardDet';
+import DetalheCard from '../Detalhe/Detalhe';
 import Menu from '../Componentes/Menu'
 
 export default function Detalhe(){
     const { id } = useParams();
-    const lista = JSON.parse(localStorage.getItem("Lista"));
+    
+    const lista = JSON.parse(localStorage.getItem("Lista")) || [];
 
     const atividade = lista.filter((video)=>{
     if(video.id == id){
@@ -18,7 +19,7 @@ export default function Detalhe(){
     return(
     <div>
     <Menu/>
-    <CardDet video ={atividade[0]}/>
+    <DetalheCard video ={atividade[0]}/>
     </div>
     );  
 
