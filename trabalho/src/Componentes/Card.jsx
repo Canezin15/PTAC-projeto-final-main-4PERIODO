@@ -9,7 +9,6 @@ export default function Card({ video }) {
         <div class="card">
 
           <div class="card-header">
-
             <iframe
               width="350"
               height="300"
@@ -18,7 +17,6 @@ export default function Card({ video }) {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen>
             </iframe>
-         
           </div>
 
           <div class="card-body">
@@ -28,7 +26,7 @@ export default function Card({ video }) {
           </div>
  
           <div class="card-footer">
-          <p><Link to="/Detalhe">Ver Mais</Link></p>
+          <p><Link to={`/detalhe/${video.id}`}>Ver Mais</Link></p>
           </div>
         </div>
       </div>

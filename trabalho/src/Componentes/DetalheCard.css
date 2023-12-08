@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;  
+  }
+  
+  body{
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+  }
+
+/*CARDS*/
+.container-2{
+    width: 100%;
+    height: calc(100vh - 80px);
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.left-side h2{
+    font-size: 30px;
+    color: #ffffff;
+}
+
+
