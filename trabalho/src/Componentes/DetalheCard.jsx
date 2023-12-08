@@ -14,9 +14,9 @@ export default function DetalheCard({ video }) {
         </div>
 
         <div class="iframe">
-          <iframe className="iframe2"
+          <iframe id="video" className="iframe2"
             width="450"
-            height="500"
+            height="600"
             src={`https://www.youtube.com/embed/${video.link.slice(17)}`}
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

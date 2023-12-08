@@ -45,4 +45,6 @@ iframe {
 .content:hover {
   background-color: #e0e0e0;
 }
-
+ #video{
+  height: 450px;
+}

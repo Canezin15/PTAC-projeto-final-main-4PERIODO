@@ -37,13 +37,6 @@
     overflow: hidden;
 }
 
-.card-img {
-    min-width: 100%;
-    width: auto;
-    height: 100%;
-}
-
-
 /* Card Body */
 .card-body{
     height: 59px;
@@ -71,9 +64,4 @@
     padding: 10px;
     text-decoration: none;
     font-weight: 600;
-}
-
-/*Animação*/
-.card:hover{
-    transform: scale3d(1.1, 1.1,1);
 }

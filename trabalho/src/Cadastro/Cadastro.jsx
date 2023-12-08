@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./Cadastro.css";
 import Menu from "../Componentes/Menu";
@@ -21,9 +21,11 @@ export default function Cadastro() {
     localStorage.setItem("Lista", JSON.stringify(lista));
   }, [lista]);
 
-  const salvar = (e) => {
+  const navigate = useNavigate();
+
+  const salvar = async(e) => {
     e.preventDefault();
-    setLista([
+    await setLista([
       ...lista,
       {
         titulo: titulo,
@@ -43,6 +45,7 @@ export default function Cadastro() {
     setData("");
     setLink("");
     setId(id + 1);
+    navigate("/")
   };
 
   return (
